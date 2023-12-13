@@ -1,0 +1,10 @@
+com\example\hospitalplanner\controllers\ConsultationController.class
+com\example\hospitalplanner\services\ConsultationService.class
+com\example\hospitalplanner\jpas\ConsultationJPA.class
+com\example\hospitalplanner\jpas\UserJPA.class
+com\example\hospitalplanner\repos\UserRepository.class
+com\example\hospitalplanner\controllers\AuthController.class
+com\example\hospitalplanner\repos\ConsultationRepository.class
+com\example\hospitalplanner\HospitalPlannerApplication.class
+com\example\hospitalplanner\services\UserService.class
+com\example\hospitalplanner\controllers\AdminController.class

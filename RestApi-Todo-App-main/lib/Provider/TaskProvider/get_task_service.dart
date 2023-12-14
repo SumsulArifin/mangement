@@ -12,13 +12,12 @@ class GetUserTask {
 
   Future<TaskModel> getTask() async {
      final userId = await DatabaseProvider().getUserId();
-    final token = await DatabaseProvider().getToken();
 
     String _url = "$url/users/$userId/tasks?lastId=&pagination=20";
 
     try {
       final request = await http
-          .get(Uri.parse(_url), headers: {'Authorization': 'Bearer $token'});
+          .get(Uri.parse(_url));
 
       print(request.statusCode);
 

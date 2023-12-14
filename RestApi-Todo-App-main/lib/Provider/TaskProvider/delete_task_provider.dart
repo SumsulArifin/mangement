@@ -22,14 +22,13 @@ class DeleteTaskProvider extends ChangeNotifier {
 
   ///Add task method
   void deleteTask({String? taskId, BuildContext? ctx}) async {
-    final token = await DatabaseProvider().getToken();
     _status = true;
     notifyListeners();
 
     final _url = "$url/tasks/$taskId";
 
     final result = await http
-        .delete(Uri.parse(_url), headers: {'Authorization': "Bearer $token"});
+        .delete(Uri.parse(_url));
 
     print(result.statusCode);
 

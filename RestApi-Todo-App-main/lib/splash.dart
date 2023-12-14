@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigate() {
     Future.delayed(const Duration(seconds: 3), () {
-      DatabaseProvider().getToken().then((value) {
+      DatabaseProvider().getUserId().then((value) {
         if (value == '') {
           PageNavigator(ctx: context).nextPageOnly(page: const LoginPage());
         } else {
@@ -36,4 +36,5 @@ class _SplashScreenState extends State<SplashScreen> {
       });
     });
   }
+
 }

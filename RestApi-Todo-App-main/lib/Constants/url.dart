@@ -1,3 +1,3 @@
 class AppUrl {
-  static String baseUrl = 'https://wisdommatt-todolist-api.herokuapp.com';
+  static String baseUrl = 'http://192.168.10.135:8080';
 }

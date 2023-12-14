@@ -19,7 +19,6 @@ class AddTaskProvider extends ChangeNotifier {
 
   ///Add task method
   void addTask({String? title}) async {
-    final token = await DatabaseProvider().getToken();
     final userId = await DatabaseProvider().getUserId();
     _status = true;
     notifyListeners();
@@ -35,7 +34,7 @@ class AddTaskProvider extends ChangeNotifier {
     };
 
     final result = await http.post(Uri.parse(_url),
-        body: json.encode(body), headers: {'Authorization': 'Bearer $token'});
+        body: json.encode(body));
 
     print(result.statusCode);
 

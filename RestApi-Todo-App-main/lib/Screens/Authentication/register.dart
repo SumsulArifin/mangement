@@ -19,6 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _password = TextEditingController();
   final TextEditingController _firstName = TextEditingController();
   final TextEditingController _lastName = TextEditingController();
+  final TextEditingController _role = TextEditingController();
 
   @override
   void dispose() {
@@ -26,13 +27,14 @@ class _RegisterPageState extends State<RegisterPage> {
     _password.clear();
     _firstName.clear();
     _lastName.clear();
+    _role.clear();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Register ')),
+      appBar: AppBar(title: Center(child: const Text('Register '))),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
@@ -49,6 +51,11 @@ class _RegisterPageState extends State<RegisterPage> {
                       title: 'Last Name',
                       controller: _lastName,
                       hint: 'Enter your last name',
+                    ),
+                    customTextField(
+                      title: 'Role',
+                      controller: _role,
+                      hint: 'Enter your Role',
                     ),
 
                     customTextField(
@@ -88,6 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             auth.registerUser(
                                 firstName: _firstName.text.trim(),
                                 lastName: _lastName.text.trim(),
+                                role: _role.text.trim(),
                                 email: _email.text.trim(),
                                 password: _password.text.trim(),
                                 context: context);

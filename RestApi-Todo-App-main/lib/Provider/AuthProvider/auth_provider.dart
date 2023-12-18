@@ -23,6 +23,7 @@ class AuthenticationProvider extends ChangeNotifier {
     required String password,
     required String firstName,
     required String lastName,
+    required String role,
     BuildContext? context,
   }) async {
     _isLoading = true;
@@ -35,6 +36,7 @@ class AuthenticationProvider extends ChangeNotifier {
       "lastName": lastName,
       "email": email,
       "password": password,
+      "role":role,
     };
 
     try {

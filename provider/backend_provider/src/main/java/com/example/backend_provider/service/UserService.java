@@ -14,6 +14,7 @@ public class UserService {
         User user1 = new User();
         user1.setFirstName(user.getFirstName());
         user1.setLastName(user.getLastName());
+        user1.setRole(user.getRole());
         user1.setEmail(user.getEmail());
         user1.setPassword(user.getPassword());
 

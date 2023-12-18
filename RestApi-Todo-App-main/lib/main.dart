@@ -24,6 +24,7 @@ class App extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => DeleteTaskProvider()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
             appBarTheme: AppBarTheme(
               color: primaryColor,
